@@ -1,0 +1,51 @@
+<div class="card">
+  <div
+    class="card explanation"
+    style="
+      margin-top: 20px;
+      padding: 16px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    "
+  >
+    <h2>S - Single Responsibility Principle (SRP)</h2>
+    <p>
+      O <strong>Single Responsibility Principle</strong> (Princípio da
+      Responsabilidade Única) afirma que uma classe deve ter apenas
+      <strong>uma única razão para mudar</strong>. Isso significa que ela deve
+      ser responsável por apenas uma funcionalidade específica do sistema.
+    </p>
+
+    <p>
+      Neste exemplo, o componente <code>UserCardComponent</code> tem a única
+      responsabilidade de <strong>exibir os dados do usuário</strong> na
+      interface.
+    </p>
+
+    <ul>
+      <li>
+        O serviço <code>UserService</code> é responsável por
+        <strong>buscar os dados</strong> do usuário.
+      </li>
+      <li>
+        O serviço <code>LoggerService</code> é responsável por
+        <strong>registrar logs</strong> no console.
+      </li>
+    </ul>
+
+    <p>
+      Separar essas responsabilidades em classes distintas facilita a
+      manutenção, o teste e a reutilização do código.
+    </p>
+
+    <blockquote style="margin-top: 12px; font-style: italic; color: #555">
+      ✨ Uma mudança na forma como buscamos usuários não afeta a lógica de
+      exibição ou de log.
+    </blockquote>
+  </div>
+
+  <h2>User Info</h2>
+  <p><strong>ID:</strong> {{ user.id }}</p>
+  <p><strong>Name:</strong> {{ user.name }}</p>
+  <p><strong>Email:</strong> {{ user.email }}</p>
+</div>

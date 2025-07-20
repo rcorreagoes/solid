@@ -1,0 +1,50 @@
+<div class="card">
+  <div
+    class="card explanation"
+    style="
+      margin-top: 20px;
+      padding: 16px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    "
+  >
+    <h2>I - Interface Segregation Principle (ISP)</h2>
+
+    <p>
+      O Princípio da Segregação de Interfaces afirma:
+      <strong
+        >"Os clientes não devem ser forçados a depender de métodos que não
+        utilizam."</strong
+      >
+    </p>
+
+    <p>
+      Isso significa que devemos dividir interfaces grandes em interfaces
+      menores e mais específicas. Assim, cada classe implementa apenas o que
+      realmente precisa, promovendo um código mais limpo, coeso e flexível.
+    </p>
+
+    <h3>🧪 Exemplo Prático:</h3>
+    <p>Criamos duas interfaces:</p>
+    <ul>
+      <li><code>Printer</code> - para dispositivos que imprimem</li>
+      <li><code>Scanner</code> - para dispositivos que escaneiam</li>
+    </ul>
+
+    <p>Duas classes implementam essas interfaces:</p>
+    <ul>
+      <li>
+        <strong>SimplePrinter</strong> implementa apenas <code>Printer</code>
+      </li>
+      <li>
+        <strong>MultiFunctionPrinter</strong> implementa <code>Printer</code> e
+        <code>Scanner</code>
+      </li>
+    </ul>
+  </div>
+
+  <h3>✔️ Exemplo prático:</h3>
+
+  <p><strong>Impressora Simples:</strong> {{ printMessage }}</p>
+  <p><strong>Multifuncional - Scanner:</strong> {{ scanMessage }}</p>
+</div>

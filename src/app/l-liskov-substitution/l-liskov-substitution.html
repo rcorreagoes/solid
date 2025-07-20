@@ -1,0 +1,73 @@
+<div class="card">
+  <div
+    class="card explanation"
+    style="
+      margin-top: 20px;
+      padding: 16px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    "
+  >
+    <h2>L - Liskov Substitution Principle (LSP)</h2>
+
+    <p>
+      O Princípio da Substituição de Liskov afirma que:
+      <strong>
+        "Se S é um subtipo de T, então os objetos do tipo T podem ser
+        substituídos por objetos do tipo S sem alterar o comportamento do
+        programa.".
+      </strong>
+      Em outras palavras:
+      <strong
+        >"Objetos de uma classe derivada devem poder ser substituídos por
+        objetos da classe base sem alterar o comportamento correto do programa."
+      </strong>
+    </p>
+
+    <p>
+      Isso significa que subclasses devem manter o comportamento esperado da
+      classe base. Se um sistema funciona com a classe base, ele também deve
+      funcionar com qualquer subclasse dela — sem erros ou efeitos colaterais
+      inesperados.
+    </p>
+
+    <h3>🧪 Exemplo Prático:</h3>
+
+    <p>
+      Criamos uma interface <code>Shape</code> com um método
+      <code>getArea()</code>. Em seguida, implementamos duas formas:
+    </p>
+    <ul>
+      <li>
+        <strong>Rectangle</strong>: calcula a área com base em
+        <code>width × height</code>
+      </li>
+      <li>
+        <strong>Square</strong>: calcula a área com base em
+        <code>side × side</code>
+      </li>
+    </ul>
+
+    <p>
+      O componente trabalha com uma lista de <code>Shape</code> sem precisar
+      saber se está lidando com um <code>Rectangle</code> ou
+      <code>Square</code>. Todas as formas respeitam o contrato da interface,
+      demonstrando que
+      <strong
+        >ambas podem ser substituídas pela classe base sem comprometer o
+        sistema</strong
+      >.
+    </p>
+  </div>
+</div>
+
+<h3>✔️ Resultado abaixo:</h3>
+<p>
+  As áreas de formas diferentes são calculadas de maneira correta, provando que
+  o princípio foi respeitado:
+</p>
+
+<h3>Áreas calculadas:</h3>
+<ul>
+  <li *ngFor="let shape of shapes">Área: {{ shape.getArea() }}</li>
+</ul>

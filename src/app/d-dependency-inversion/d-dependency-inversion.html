@@ -1,0 +1,50 @@
+<div class="card">
+  <div
+    class="card explanation"
+    style="
+      margin-top: 20px;
+      padding: 16px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    "
+  >
+    <h2>D - Dependency Inversion Principle (DIP)</h2>
+
+    <p>
+      Esse princípio afirma:
+      <strong
+        >"Módulos de alto nível não devem depender de módulos de baixo nível.
+        Ambos devem depender de abstrações."</strong
+      >
+    </p>
+
+    <p>
+      Ou seja, em vez de uma classe depender diretamente de outra, ela deve
+      depender de uma interface. Isso permite trocar a implementação concreta
+      facilmente, sem modificar o consumidor.
+    </p>
+
+    <h3>🧪 Exemplo Prático:</h3>
+
+    <p>
+      Temos uma interface chamada <code>MessageService</code> com o método
+      <code>sendMessage()</code>.
+    </p>
+
+    <p>Duas classes implementam essa interface:</p>
+    <ul>
+      <li><strong>EmailService</strong></li>
+      <li><strong>SMSService</strong></li>
+    </ul>
+
+    <p>
+      Uma classe de alto nível (nosso componente) consome a interface, e não
+      sabe nem se está enviando por e-mail ou SMS.
+    </p>
+  </div>
+
+  <h3>✔️ Resultado prático:</h3>
+
+  <p><strong>Serviço de e-mail:</strong> {{ emailResult }}</p>
+  <p><strong>Serviço de SMS:</strong> {{ smsResult }}</p>
+</div>

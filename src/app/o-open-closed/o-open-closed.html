@@ -1,0 +1,56 @@
+<div class="card">
+  <div
+    class="card explanation"
+    style="
+      margin-top: 20px;
+      padding: 16px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    "
+  >
+    <h2>O - Open/Closed Principle (OCP)</h2>
+    <p>
+      O <strong>Open/Closed Principle</strong> afirma que classes devem estar
+      <strong>abertas para extensão</strong>, mas
+      <strong>fechadas para modificação</strong>.
+    </p>
+
+    <p>
+      Neste exemplo, usamos a interface <code>DiscountStrategy</code> para
+      definir o comportamento de estratégias de desconto. Assim, podemos
+      adicionar novas estratégias (ex: desconto para estudantes) sem alterar o
+      componente principal.
+    </p>
+
+    <ul>
+      <li><code>RegularDiscount</code> aplica 10%</li>
+      <li><code>PremiumDiscount</code> aplica 25%</li>
+    </ul>
+
+    <p>
+      O componente <code>DiscountComponent</code> não precisa ser alterado para
+      suportar novas regras — basta criar novas implementações.
+    </p>
+
+    <blockquote style="margin-top: 12px; font-style: italic; color: #555">
+      ✨ Cresça seu sistema sem quebrar o que já funciona.
+    </blockquote>
+  </div>
+  <h2>Calculadora de Desconto</h2>
+
+  <label
+    >Preço base:
+    <input type="number" [(ngModel)]="price" />
+  </label>
+
+  <label
+    >Tipo de cliente:
+    <select [(ngModel)]="selectedStrategy">
+      <option *ngFor="let strategy of strategies" [ngValue]="strategy">
+        {{ strategy.label }}
+      </option>
+    </select>
+  </label>
+
+  <p><strong>Preço final:</strong> {{ finalPrice | currency:'BRL' }}</p>
+</div>
